@@ -32,6 +32,12 @@ class UsersView extends Users
                 "</tr>";
         }
     }
+
+    public function LastInsertedID()
+    {
+        $ID = $this->getLatestUserID();
+        return $value = array_shift($ID);
+    }
 }
 
 

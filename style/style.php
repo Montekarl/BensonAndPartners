@@ -10,8 +10,8 @@
 
     /* Set gray background color and 100% height */
     .sidenav {
-        padding-top: 20px;
-        background-color: #f1f1f1;
+        padding-top: 30px;
+        background-color: blanchedalmond;
         height: 100%;
     }
 

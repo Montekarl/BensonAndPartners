@@ -60,22 +60,14 @@
                         <b>Applicant Details</b>
                     </div>
 
-                    <script>
-                        function updateUser(userID){
-                            $.get( "/BensonOOP/classes/GetID.php?id="+userID, function( data ) {
-                                //$( ".result" ).html( data );
-                                document.getElementById('specific-informations').innerHTML = data;
-                               // alert( "Load was performed." );
-                            });
-                        };
-                    </script>
+                    <?php include "scripts/scripts.php"; ?>
 
-                    <div id="specific-informations">
+                    <div id="detailed-SideBar">
                         <?php
-                            $getUser = new UsersView();
-                            $getUser->showUser(1);
-//                            $setUser = new UsersController();
-//                            $setUser->createUser('Mr','Karolis','Petrikas','','','','','','','','','','','','','','','','','')
+                            $getLatestUser = new UsersView();
+                            $getLatestUser->showUser($getLatestUser->LastInsertedID());
+                            //$setUser = new UsersController();
+                            //$setUser->createUser('Mr','Karolis','Petrikas','','','','','','','','','','','','','','','','','')
                         ?>
                     </div>
                 </div>
