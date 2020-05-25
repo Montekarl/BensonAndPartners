@@ -23,10 +23,9 @@ class UsersView extends Users
         foreach ($this->getUsers() as $data)
         {
             echo
-                "<tr>".
+                "<tr onclick='showMoreDetailsSideBar(".$data['user_id'].")' class = 'find-id'>".
                 "<td></td>".
                 "<td></td>".
-                "<td> <button type = 'button' onclick='showMoreDetailsSideBar(".$data['user_id'].")' class = 'find-id'> + </button> "."</td>".
                 "<td class = 'id'>".$data['user_id']."</td>".
                 "<td>".$data['title']." ".$data['first_name']." ".$data['last_name']."</td>".
                 "<td>".$data['email']."</td>".

@@ -32,8 +32,6 @@
                             <tr>
                                 <th><img src="http://www.myiconfinder.com/uploads/iconsets/256-256-924590246403a197a00e4a64c3e46da4-accept.png" style="width:22px; height:22px"></th>
                                 <th><img src="https://cdn3.iconfinder.com/data/icons/office-set-pack-1/512/12-512.png" style="width:20px; height:20px"></th>
-                                <th><img src="https://image.flaticon.com/icons/png/512/69/69544.png" style="width:20px; height:20px"></th>
-                                <th id="bollocks<?=$row['user_id']?>" style="display:none">Additional Information </th>
                                 <th>ID</th>
                                 <th>Full Name</th>
                                 <th style="width: 200px;">Email</th>

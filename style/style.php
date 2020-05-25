@@ -13,6 +13,9 @@
         padding-top: 30px;
         background-color: blanchedalmond;
         height: 100%;
+        position:fixed;
+
+
     }
 
     /* Set black background color, white text and some padding */
