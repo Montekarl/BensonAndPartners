@@ -22,7 +22,8 @@
         padding-top: 30px;
         background-color: blanchedalmond;
         height: 82%;
-        width: 700px;
+        width: 34%;
+        overflow:scroll;
     }
 
     /* Set black background color, white text and some padding */
@@ -30,6 +31,13 @@
         background-color: #555;
         color: white;
         padding: 15px;
+    }
+
+    #glyphs{
+        width: 50px;
+        height: 50px;
+        margin-top: 15px;
+        margin-left: 5px;
     }
 
     /* On small screens, set height to 'auto' for sidenav and grid */

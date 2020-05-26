@@ -16,6 +16,10 @@ class UsersView extends Users
         echo "they work ". $result['employment_status']. " as <b>". $result['job_title']."</b> - Total income: <b>£" .$result['salary']. "</b> a year <br>";
         echo "Claiming Housing Benefit:  <b>". $result['dss']. "</b> | Has Pets: <b>". $result['pets']."</b> | Has Children: <b>" . $result['children'] . "</b><br>";
         echo "<pre>".$result['special_conditions']. "<br></pre>";
+        echo "<img src = \"img\glyphs\png\calendar-5.png\" id=\"glyphs\" alt=\"book a viewing\">";
+        echo "<img src = \"img\glyphs\png\print.png\" id=\"glyphs\" alt=\"book a viewing\">";
+        echo "<img src = \"img\glyphs\png\settings-6.png\" id=\"glyphs\" alt=\"book a viewing\">";
+        echo "<img src = \"img\glyphs\png\garbage.png\" id=\"glyphs\" alt=\"book a viewing\">";
     }
 
     public function showUsers()

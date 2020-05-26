@@ -15,7 +15,11 @@ class getId extends Users
          "they need to move by ". $user['move_by']. " primarily in <br>". $user['areas']."<br>".
          "they work ". $user['employment_status']. " as <b>". $user['job_title']."</b> - Total income: <b>£" .$user['salary']. "</b> a year <br>".
          "Claiming Housing Benefit:  <b>". $user['dss']. "</b> | Has Pets: <b>". $user['pets']."</b> | Has Children: <b>" . $user['children'] . "</b><br>".
-         "<pre>".$user['special_conditions']. "<br></pre>";
+         "<pre>".$user['special_conditions']. "</pre><br>".
+         "<img src = 'img\glyphs\png\calendar-5.png' id='glyphs' alt='book a viewing'>".
+         "<img src = 'img\glyphs\png\print.png' id='glyphs' alt='book a viewing'>".
+         "<img src = 'img\glyphs\png\settings-6.png' id='glyphs' alt='book a viewing'>".
+         "<img src = 'img\glyphs\png\garbage.png' id='glyphs' alt='book a viewing'>";
     }
 }
 $new_user = new getId();
