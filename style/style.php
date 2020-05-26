@@ -11,11 +11,18 @@
     /* Set gray background color and 100% height */
     .sidenav {
         padding-top: 30px;
-        background-color: blanchedalmond;
         height: 100%;
-        position:fixed;
+    }
 
-
+    #detailed-SideBar{
+        top: 159px;
+        right: 0;
+        position: fixed;
+        z-index: 200;
+        padding-top: 30px;
+        background-color: blanchedalmond;
+        height: 82%;
+        width: 700px;
     }
 
     /* Set black background color, white text and some padding */
@@ -39,5 +46,9 @@
     }
     #parent:hover #hover-content {
         display:block;
+    }
+
+    pre {
+        white-space: pre-wrap;
     }
 </style>

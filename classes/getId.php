@@ -6,7 +6,7 @@ class getId extends Users
     public function getFullDetails($userID)
     {
         $user = $this->getUser($userID);
-        return $user['first_name']. " ". $user['last_name']. "<br>".
+        return "<b>".$user['first_name']. " ". $user['last_name']. "</b></h4><br>".
          $user['city_name']. "<br>".
          str_replace(" ", "", $user['contact_number']) . "<br>".
          $user['email']. "<br>".

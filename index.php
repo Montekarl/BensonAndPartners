@@ -55,12 +55,12 @@
                 </div>
                 <div class="col-sm-4 sidenav" style="margin-top: 87px">
                     <div id="getinfo">
-                        <b>Applicant Details</b>
                     </div>
 
                     <?php include "scripts/scripts.php"; ?>
 
                     <div id="detailed-SideBar">
+                        <p><b>Applicant Details</b></p>
                         <?php
                             $getLatestUser = new UsersView();
                             $getLatestUser->showUser($getLatestUser->LastInsertedID());
