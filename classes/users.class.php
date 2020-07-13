@@ -31,7 +31,7 @@ class Users extends Dbh
                   title,
                   first_name,
                   last_name,
-                  city_name,
+                  city_name, 
                   email,
                   bedrooms,
                   tenants,

@@ -6,6 +6,7 @@ class getId extends Users
     public function getFullDetails($userID)
     {
         $user = $this->getUser($userID);
+
         return "<b>".$user['first_name']. " ". $user['last_name']. "</b></h4><br>".
          $user['city_name']. "<br>".
          str_replace(" ", "", $user['contact_number']) . "<br>".
@@ -19,8 +20,15 @@ class getId extends Users
          "<img src = 'img\glyphs\png\calendar-5.png' id='glyphs' alt='book a viewing'>".
          "<img src = 'img\glyphs\png\print.png' id='glyphs' alt='book a viewing'>".
          "<img src = 'img\glyphs\png\settings-6.png' id='glyphs' alt='book a viewing'>".
+         "<img src = 'img\glyphs\png\compose.png' id='glyphs' alt='edit user' class='edit_user'>".
          "<img src = 'img\glyphs\png\garbage.png' id='glyphs' alt='book a viewing'>";
+
+
     }
+
+
+
 }
+
 $new_user = new getId();
 echo $new_user->getFullDetails($_GET['id']);

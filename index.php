@@ -26,6 +26,7 @@
 <!--                </div>-->
                 <div class="col-sm-8 text-left">
                     <h3>Lettings Users</h3>
+
                     <hr>
                         <table class="table table-bordered table-hover" style="width:100%;" id="example">
                             <thead>
@@ -61,15 +62,25 @@
 
                     <div id="detailed-SideBar">
                         <p><b>Applicant Details</b></p>
+
                         <?php
                             $getLatestUser = new UsersView();
                             $getLatestUser->showUser($getLatestUser->LastInsertedID());
-                            //$setUser = new UsersController();
-                            //$setUser->createUser('Mr','Karolis','Petrikas','','','','','','','','','','','','','','','','','')
+                            $getLatestUser->showButtons($getLatestUser->LastInsertedID());
+
+                            $setUser = new UsersController();
+
+                            if(isset($_POST['btn-save']))
+                            {
+                                $setUser->createUser($_POST['title'],$_POST['first_name'],$_POST['last_name'],$_POST['city_name'],$_POST['email'],$_POST['bedrooms'],$_POST['tenants'],$_POST['furniture'],$_POST['maximum_budget'],$_POST['contact_number'],$_POST['move_by'],'',$_POST['employment_status'],$_POST['job_title'],$_POST['salary'],$_POST['lease'],$_POST['special_conditions'],$_POST['dss'],$_POST['pets'],$_POST['children']);
+                            }
+
+
+
                         ?>
 
-
                     </div>
+
                 </div>
             </div>
         </div>

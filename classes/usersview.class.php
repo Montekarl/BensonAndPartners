@@ -16,11 +16,9 @@ class UsersView extends Users
         echo "they work ". $result['employment_status']. " as <b>". $result['job_title']."</b> - Total income: <b>£" .$result['salary']. "</b> a year <br>";
         echo "Claiming Housing Benefit:  <b>". $result['dss']. "</b> | Has Pets: <b>". $result['pets']."</b> | Has Children: <b>" . $result['children'] . "</b><br>";
         echo "<pre>".$result['special_conditions']. "<br></pre>";
-        echo "<img src = \"img\glyphs\png\calendar-5.png\" id=\"glyphs\" alt=\"book a viewing\">";
-        echo "<img src = \"img\glyphs\png\print.png\" id=\"glyphs\" alt=\"book a viewing\">";
-        echo "<img src = \"img\glyphs\png\settings-6.png\" id=\"glyphs\" alt=\"book a viewing\">";
-        echo "<img src = \"img\glyphs\png\garbage.png\" id=\"glyphs\" alt=\"book a viewing\">";
     }
+
+
 
     public function showUsers()
     {
@@ -39,6 +37,20 @@ class UsersView extends Users
                 "<td>".$data['salary']."</td>".
                 "</tr>";
         }
+    }
+
+    public function showButtons($userId)
+    {
+        $result = $this->getUser($userId);
+        echo
+            "<img src = 'img\glyphs\png\calendar-5.png' id='glyphs' class='book_appointment' onclick='bookLettingsAppointment(".$result['user_id'].")'>".
+            "<img src = 'img\glyphs\png\print.png' id='glyphs' class='print_user' onclick='printUser(".$result['user_id'].")'>".
+            "<img src = 'img\glyphs\png\settings-6.png' id='glyphs' class='match_properties_to_user' onclick='matchProperty(".$result['user_id'].")'>".
+            "<img src = 'img\glyphs\png\compose.png' id='glyphs' class='edit_user' onclick='editUser(".$result['user_id'].")'>".
+            "<img src = 'img\glyphs\png\garbage.png' id='glyphs' class='delete_user'>";
+
+            include "Forms/AddNewLettingsApplicant.php";
+        return $result;
     }
 
     public function LastInsertedID()
